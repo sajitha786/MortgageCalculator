@@ -19,10 +19,10 @@ public class Main {
         System.out.println("Period (Years): ");
         int period = scanner.nextInt();
         int numberOfPayments = period * months_in_year;
-        double a = Math.pow(1 + monthly_rate , numberOfPayments);
+        double sub_calculation = Math.pow(1 + monthly_rate , numberOfPayments);
         //System.out.println(a);
 
-        double mortgage  = principal *(( monthly_rate * a)/ (a-1));
+        double mortgage  = principal *(( monthly_rate * sub_calculation)/ (sub_calculation-1));
 
         String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
         System.out.println("Mortgage: "+ mortgageFormatted);
